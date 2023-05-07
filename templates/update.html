@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>TEST</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block head %}
+    
+    {% endblock %}
+    
+    {% block body %}
+
+    <div class = "contents">
+        <h1>Update Tasks</h1>
+        <form action = "/update/{{task.id}}" method = "POST">
+            <input type = "text" name = "content" id = "content" value="{{task.content}}"">
+            <input type="text" name="content" id="content" value="{{task.content}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+
+    {% endblock %}
+    
+</body>
+</html>     
+    
